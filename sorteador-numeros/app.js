@@ -25,7 +25,7 @@ function gerarNumeroAleatorio(min, max){
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function aleterarStatusBotao(){
+function alterarStatusBotao(){
     let botao = document.getElementById("btn-reiniciar");
 
     if (botao.classList.contains("container__botao-desabilitado")){
