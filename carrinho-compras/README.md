@@ -1,4 +1,4 @@
-<h1>Jogo do Número Secreto</h1>
+<h1>Carrinho de Compras</h1>
 
 <h2>📌 Sobre</h2>
 <p>Projeto utilizado nos cursos de lógica de programação da Alura, no qual tem um carrinho de compras que pode adicionar e limpar essas compras.</p>
