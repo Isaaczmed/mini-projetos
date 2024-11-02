@@ -1,7 +1,7 @@
-<h1>Jogo do Número Secreto</h1>
+<h1>Sorteador de Números</h1>
 
 <h2>📌 Sobre</h2>
-<p>Projeto utilizado nos cursos de lógica de programação da Alura, no qual é escolhido um número aleatório no qual o usuário vai ter que acertar.</p>
+<p>Projeto utilizado nos cursos de lógica de programação da Alura, no qual é feito um sorteador de números, que o usuário pode escolher como será sorteado esse número.</p>
 
 ## 🚀 Tecnologias
 <div>
