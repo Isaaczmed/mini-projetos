@@ -1,7 +1,7 @@
-<h1>Aluguel de Jogos</h1>
+<h1>Amigo Secreto</h1>
 
 <h2>📌 Sobre</h2>
-<p>Projeto utilizado nos cursos de lógica de programação da Alura, no qual tem pode adicionar nomes de amigos numa lista para um sortear.</p>
+<p>Projeto utilizado nos cursos de lógica de programação da Alura, no qual tem pode adicionar nomes de amigos numa lista para sortear amigos secretos.</p>
 
 ## 🚀 Tecnologias
 <div>
