@@ -1,4 +1,4 @@
-<h1>INGRESSOS</h1>
+<h1>Igressos</h1>
 
 <h2>📌 Sobre</h2>
 <p>Projeto utilizado nos cursos de lógica de programação da Alura, no qual pode fazer a compra de ingressos.</p>
