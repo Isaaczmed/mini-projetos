@@ -46,6 +46,24 @@ function adicionarItem(evento) {
     // obs: poderia ser alterado com .for, mas foi usado o setAttribute para mostrar outras maneiras 
     checkboxLabel.setAttribute("for", checkboxInput.id);
 
+    // Adiciona um evento ao checkbox contido na label, 
+    // no qual ao clicar ativa uma função apenas para essa linha de código
+    checkboxLabel.addEventListener("click", function (evento) {
+        /* Seleciona o evento e o elemento que está sendo clicado através do currentTarget.
+        Com o querySelector() pode-se selecionar o conteúdo do elemento clicado que possuí 
+        a classe .checkbox-input */ 
+        const checkboxInput = evento.currentTarget.querySelector(".checkbox-input");
+        // Faz o mesmo para o checkbox customizado
+        const checkboxCustomizado = evento.currentTarget.querySelector(".checkbox-customizado");
+
+        // Verifica caso o input está checked, caso esteja, adiciona a class "checked", caso não retira
+        if (checkboxInput.checked) {
+            checkboxCustomizado.classList.add("checked");
+        } else {
+            checkboxCustomizado.classList.remove("checked");
+        }
+    });
+    
     // Adiciona na const checkboxCustomizado o comando para criar um elemento ("div")
     const checkboxCustomizado = document.createElement("div");
     // Adiciona uma class no na div criada anteriormente
