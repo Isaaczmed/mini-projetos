@@ -62,7 +62,7 @@ p {
     text-align: left;
 }
 
-#input-item {
+.input-item {
     padding: 12px 16px;
     display: block;
     border-radius: 24px;
@@ -70,7 +70,7 @@ p {
     width: 307px;
 }
 
-#input-item::placeholder {
+.input-item::placeholder {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     line-height: 19px;
