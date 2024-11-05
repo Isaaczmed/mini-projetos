@@ -31,7 +31,6 @@ export const editarItem = (elemento) => {
 
         // Coloca na const o elemento com a class ".texto-data" ("p") 
         const novaItemData = elemento.querySelector(".texto-data");
-
         // Altera o innerText do novoItemData, colocando a data do dia da semana, a data em números e o horário
         novaItemData.innerText = `${new Date().toLocaleDateString("pt-BR", { weekday: "long"})} (${new Date().toLocaleDateString()}) às ${new Date().toLocaleTimeString("pt-BR", {hour: "numeric", minute: "numeric"})}`;
     }

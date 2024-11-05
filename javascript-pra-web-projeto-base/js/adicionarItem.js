@@ -14,11 +14,19 @@ export function adicionarItem(evento) {
     // (obs: o Form atualiza a tela automaticamente, por isso o comando previne que isso aconteça)
     evento.preventDefault();
 
+    // Faz uma condicional para ver se o item digitado era vazio
+    if (item.value === null || item.value.trim() === ""){
+        alert("Por favor, insira um item!");
+        // Faz com que o resto da função não execute
+        return;
+    }
+
     // Adiciona na const, a função para fazer todo o processo de criação do item dentro da lista
     const itemDaLista = criarItemDaLista(item.value);
     // Faz com que o itemDaLista("div") fique identado dentro da listaDeCompras("ul") 
     listaDeCompras.appendChild(itemDaLista);
     // Envia a lista de compras para a função de verificar lista
     verificarListaVazia(listaDeCompras);
+    // Limpa o valor do item
     item.value = "";
 }
