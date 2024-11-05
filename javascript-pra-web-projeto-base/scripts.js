@@ -4,6 +4,8 @@ const item = document.getElementById("input-item");
 const botaoSalvarItem = document.getElementById("adicionar-botao");
 // Seleciona o ul do carrinho de compras
 const listaDeCompras = document.getElementById("lista-de-compras");
+// Seleciona o ul da lista de comprados
+const listaComprados = document.getElementById("lista-comprados");
 // Cria uma váriavel "contador" para diferienciar os itens adicionados na lista
 let contador = 0;
 
@@ -55,12 +57,17 @@ function adicionarItem(evento) {
         const checkboxInput = evento.currentTarget.querySelector(".checkbox-input");
         // Faz o mesmo para o checkbox customizado
         const checkboxCustomizado = evento.currentTarget.querySelector(".checkbox-customizado");
+        // Seleciona o título do item mais perto 
+        const itemTitulo = evento.currentTarget.closest("li").querySelector("#item-titulo");
 
-        // Verifica caso o input está checked, caso esteja, adiciona a class "checked", caso não retira
+        // Verifica caso o input está checked, caso esteja, adiciona a class "checked" e na lista de comprados,
+        // caso não retira dos dois
         if (checkboxInput.checked) {
             checkboxCustomizado.classList.add("checked");
+            listaComprados.appendChild(itemDaLista);
         } else {
             checkboxCustomizado.classList.remove("checked");
+            listaDeCompras.appendChild(itemDaLista);
         }
     });
     
@@ -81,6 +88,8 @@ function adicionarItem(evento) {
 
     // Adiciona na const nomeDoItem o comando para criar um elemento ("p")
     const nomeDoItem = document.createElement("p");
+    // Pega o id do item para adicionar um título
+    nomeDoItem.id = "item-titulo"
     // Altera o texto do "p" atribuindo o valor do item que foi anteriormente concatenado
     nomeDoItem.innerText = item.value;
     // Faz com que o nomeDoItem("p") fique identado dentro do containerNomeDoItem("div")
