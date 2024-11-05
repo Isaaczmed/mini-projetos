@@ -125,6 +125,12 @@ export function criarItemDaLista(item) {
     // Altera o .alt da imagemRemover("img")
     imagemEditar.alt = "Editar";
 
+    // Criando uma função anônima que ativada no evento de click sobre o botão editar, 
+    // que envia como parâmetro o item criado
+    botaoEditar.addEventListener("click", function () {
+        editarItem(itemDaLista);
+    })
+
     // Faz com que o imagemRemover("img") fique identado dentro do botaoRemover("button")
     botaoRemover.appendChild(imagemRemover);
     // Faz com que o botaoRemover("button") fique identado dentro do containerBotoes("div")
