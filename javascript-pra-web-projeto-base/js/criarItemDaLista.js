@@ -1,4 +1,6 @@
+// Importa as devidas funções
 import { excluirItem } from "./excluirItem.js";
+import { editarItem } from "./editarItem.js";
 import { verificarListaComprados } from "./verificarListaComprados.js";
 
 // Seleciona o ul da lista de comprados
