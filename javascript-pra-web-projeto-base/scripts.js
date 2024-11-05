@@ -1,3 +1,4 @@
+// Importa a função criada no adicionarItem.js
 import { adicionarItem } from "./js/adicionarItem.js";
 
 // Seleciona o botão que salva o item na lista
