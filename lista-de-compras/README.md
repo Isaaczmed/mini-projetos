@@ -5,7 +5,7 @@
 
 Aplicação web de lista de compras para o curso de construção de páginas dinâmicas com JavaScript.
 
-## 🔨 Funcionalidades do projeto
+## 📌 Sobre
 
 A aplicação permite inserir itens em uma lista de forma dinâmica, permitindo a exclusão e edição dos mesmos. Os itens terão o nome e também a data e horário que foram criados. Também é possível selecionar um checkbox para informar que o item foi comprado.
 
@@ -15,9 +15,11 @@ A aplicação permite inserir itens em uma lista de forma dinâmica, permitindo 
 
 As técnicas e tecnologias utilizadas pra isso são:
 
-- `HTML`: criação dos elementos da tela;
-- `CSS`: estilização da aplicação;
-- `JavaScript`: construção de elementos dinâmicos através da manipulação do DOM.
+<div>
+  <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+</div>
 
 ## 📁 Acesso ao projeto
 
