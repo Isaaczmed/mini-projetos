@@ -13,14 +13,14 @@ A aplicação permite inserir itens em uma lista de forma dinâmica, permitindo 
 
 ## 🚀 Tecnologias
 
-As técnicas e tecnologias utilizadas pra isso são:
-
 <div>
   <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 </div>
 
-## 📁 Acesso ao projeto
+## 🛠️ Rodar o projeto
 
-Você pode [acessar o código fonte do projeto inicial](https://github.com/alura-cursos/3801-javascript-para-web/tree/projeto-base) ou [baixá-lo](https://github.com/alura-cursos/3801-javascript-para-web/archive/refs/heads/projeto-base.zip).
+<div>
+  <a href="https://lista-de-compras-three-xi.vercel.app" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" target="_blank"></a>   
+</div>
