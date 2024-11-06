@@ -13,8 +13,6 @@ A aplicação permite inserir itens em uma lista de forma dinâmica, permitindo 
 
 ## 🚀 Tecnologias
 
-As técnicas e tecnologias utilizadas pra isso são:
-
 <div>
   <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white">
