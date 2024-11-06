@@ -1,5 +1,5 @@
 
-![Descricao da sua imagem](https://imgur.com/a/vfzJLD7.png)
+![Descricao da sua imagem](https://imgur.com/LAhVKqi.png)
 
 # Formação A partir do zero iniciante em programação
 
