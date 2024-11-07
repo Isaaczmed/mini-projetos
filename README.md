@@ -1,7 +1,7 @@
-<h1>Mini Projetos</h1>
+<h1>Mini-Projetos</h1>
 
 <h2>📌 Sobre</h2>
-<p>Aqui será um armazém de mini-projetos desenvolvidos durante meus estudos da faculdade e nos cursos da Alura, entre outros. Este espaço é dedicado ao meu crescimento contínuo como desenvolvedor, explorando diversas linguagens e tecnologias.</p>
+<p>Este espaço será um repositório de mini-projetos que desenvolvi ao longo dos meus estudos na faculdade, cursos da Alura e outras formações. Aqui, compartilho minha jornada de crescimento como desenvolvedor, explorando diferentes linguagens e tecnologias em busca de constante aprendizado.</p>
 
 ![dino](https://github.com/user-attachments/assets/c7274f85-6c7b-410c-823e-e505a3368e00)
 
@@ -11,5 +11,3 @@
   <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 </div>
-
-
