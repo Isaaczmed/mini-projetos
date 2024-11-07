@@ -25,7 +25,10 @@ function lerConteudoDoArquivo(arquivo) {
         // Ao carregar o leitor de arquivos faz uma função anônima
         leitor.onload = () => {
             // Caso dê certo (resolve) atribuí o url e seu nome com o resultado da leitura do arquivo 
-            resolve({ url: leitor.result, nome: arquivo.name})
+            resolve({
+                url: leitor.result,
+                nome: arquivo.name
+            })
         }
 
         // Ao carregar o leitor de arquivos faz uma função anônima
@@ -64,10 +67,110 @@ inputUpload.addEventListener("change", async (evento) => {
             imagemPrincipal.src = conteudoDoArquivo.url;
             // Atribuí no .textContent do elemento selecionado o .nome do conteúdo do arquivo
             nomeDaImagem.textContent = conteudoDoArquivo.nome;
-        // Caso dê erro 
+            // Caso dê erro 
         } catch (erro) {
             // Avisa no console o erro 
             console.error("Erro na leitura do arquivo");
         }
     }
-})
+});
+
+// Coloca na const o elemento pego com o id "input-tags" (input)
+const inputTags = document.getElementById("input-tags");
+// Coloca na const o elemento pego com o id "lista-tags" (ul)
+const listaTags = document.getElementById("lista-tags");
+
+// Adiciona um evento click sobre o listaTags
+listaTags.addEventListener("click", (evento) => {
+    // Caso o target (alvo) clicado conter em sua classList "remove-tag"
+    if (evento.target.classList.contains("remove-tag")) {
+        // Coloca na const o pai do elemento clicado "li"
+        const tagQueQueremosRemover = evento.target.parentElement;
+        // Rmove o tagQueQueremosRemover ("li") do listaTags ("ul")
+        listaTags.removeChild(tagQueQueremosRemover);
+    }
+});
+
+const tagsDisponiveis = [
+    "Front-end",
+    "Back-end",
+    "Full-stack",
+    "DevOps",
+    "Data Science",
+    "Machine Learning",
+    "Inteligência Artificial",
+    "Engenharia de Dados",
+    "Análise de Dados",
+    "Cybersecurity",
+    "Cloud Computing",
+    "Redes",
+    "IoT",
+    "Blockchain",
+    "QA",
+    "Desenvolvimento Mobile",
+    "Desenvolvimento de Jogos",
+    "Automação",
+    "Administração de Sistemas",
+    "Suporte Técnico",
+    "Big Data",
+    "Engenharia de Software",
+    "Banco de Dados",
+    "Arquitetura de Software",
+    "Design de UX/UI",
+    "Robótica",
+    "Administração de Redes",
+    "Realidade Aumentada",
+];
+
+/* Estrutura assíncrona permite executar operações demoradas (ex: leitura de arquivos) 
+sem bloquear o restante do código. 
+Assim, o código continua rodando enquanto espera a conclusão da operação. */
+async function verificaTagsDisponiveis(tagTexto) {
+    return new Promise((resolve) => {
+        // Coloca um tempo para fazer a pesquisa
+        setTimeout(() => {
+            // Caso dê certo vê se nas tagsDisponiveis inclui a tagTexto
+            resolve(tagsDisponiveis.includes(tagTexto));
+        // Tempo de 1000ms
+        }, 1000)
+    })
+}
+
+// Adiciona um evento ao precionar uma tecla
+inputTags.addEventListener("keypress", async (evento) => {
+    // Caso a key precionada do evento seja igual a "Enter"
+    if (evento.key === "Enter") {
+        // Previne o evento padrão
+        evento.preventDefault();
+        // Coloca na const o valor com .trim (tirando os espaços antes e depois da palavra) do inputTags
+        const tagTexto = inputTags.value.trim();
+
+        // Caso não seja vazio
+        if (tagTexto !== "") {
+            // Faz uma tentativa
+            try {
+                // Coloca na const o resultado da espera da função verificaTagsDisponiveis 
+                // enviando o tagTexto como parâmetro
+                const tagExiste = await verificaTagsDisponiveis(tagTexto);
+                // Caso a tagExiste seja verdadeiro
+                if (tagExiste) {
+                    // Coloca na const a criação do elemento "li"
+                    const tagNova = document.createElement("li");
+                    // Altera o html dentro do tagNova
+                    tagNova.innerHTML = `<p>${tagTexto}</p> <img src="./img/close-black.svg" class="remove-tag">`
+                    // Coloca o elemento "tagNova" (li) identado dentro do "listaTags" (ul)
+                    listaTags.appendChild(tagNova);
+                    // Define o valor do input como vazio 
+                    inputTags.value = "";
+                    // Caso não
+                } else {
+                    alert("Tag não encontrada.");
+                }
+            // Caso a tentativa dê errado
+            } catch (error) {
+                console.error("Erro ao verificar a existência da tag");
+                alert("Erro ao verificar a existência da tag. Verifique o console.")
+            }
+        }
+    }
+});
