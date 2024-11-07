@@ -131,7 +131,7 @@ async function verificaTagsDisponiveis(tagTexto) {
         setTimeout(() => {
             // Caso dê certo vê se nas tagsDisponiveis inclui a tagTexto
             resolve(tagsDisponiveis.includes(tagTexto));
-        // Tempo de 1000ms
+            // Tempo de 1000ms
         }, 1000)
     })
 }
@@ -166,11 +166,69 @@ inputTags.addEventListener("keypress", async (evento) => {
                 } else {
                     alert("Tag não encontrada.");
                 }
-            // Caso a tentativa dê errado
+                // Caso a tentativa dê errado
             } catch (error) {
                 console.error("Erro ao verificar a existência da tag");
                 alert("Erro ao verificar a existência da tag. Verifique o console.")
             }
         }
     }
+});
+
+async function publicarProjeto(nomeDoProjeto, descricaoProjeto, tagsProjeto) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            // Simulação de um fator externo para dar erro (neste caso, baseado na sorte)
+            const deuCerto = Math.random() > 0.5;
+            if (deuCerto) {
+                resolve("Projeto publicado com sucesso.")
+            } else {
+                reject("Erro ao publicar o projeto.")
+            }
+        }, 2000)
+    })
+}
+
+// Coloca na const o elemento com o id "botao-publicar" (button)
+const botaoPublicar = document.querySelector(".botao-publicar");
+// Adiciona um evento ao clicar no botaoPublicar
+botaoPublicar.addEventListener("click", async (evento) => {
+    // Previne o evento padrão
+    evento.preventDefault();
+    // Coloca na const o elemento pego com o id "nome"
+    const nomeDoProjeto = document.getElementById("nome").value;
+    // Coloca na const o elemento pego com o id "descricao"
+    const descricaoDoProjeto = document.getElementById("descricao").value;
+    // Coloca na const um array vindo de todos os "p" pegos da listaTags
+    // .map é um método de arrays que cria um novo array, aplicando uma função a cada item do array original.
+    // que o caso dá função é passar a tag, que é o "p" e pega o seu textContect de cada um
+    const tagsProjeto = Array.from(listaTags.querySelectorAll("p")).map((tag) => tag.textContent);
+
+    try {
+        const resultado = await publicarProjeto(nomeDoProjeto, descricaoDoProjeto, tagsProjeto);
+        console.log(resultado);
+        alert("Projeto publicado com sucesso!");
+    } catch (error) {
+        console.log("Falha: " + error);
+        alert("Erro na publicação do projeto.")
+    }
+});
+
+// Coloca na const o elemento com a class "botao-descartar" (button)
+const botaoDescartar = document.querySelector(".botao-descartar");
+
+// Aciona um evento ao clicar
+botaoDescartar.addEventListener("click", (evento) => {
+    evento.preventDefault()
+
+    // Como só possuí um form no html vai colocar na const o elemento "form"
+    const formulario = document.querySelector("form");
+    // Comando para limpar todos os campos do elemento selecionado
+    formulario.reset();
+    // Define a imagem do projeto como a padrão anterior
+    imagemPrincipal.src = "./img/imagem1.png"
+    nomeDaImagem.textContent = "image_projeto.png"
+    
+    // Limpa a lista das tags
+    listaTags.innerHTML = "";
 });
