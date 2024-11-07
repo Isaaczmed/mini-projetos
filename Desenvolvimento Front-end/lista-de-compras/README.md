@@ -22,5 +22,5 @@ A aplicação permite inserir itens em uma lista de forma dinâmica, permitindo 
 ## 🛠️ Rodar o projeto
 
 <div>
-  <a href="https://lista-de-compras-three-xi.vercel.app" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" target="_blank"></a>   
+  <a href="https://lista-de-compras-eight-mu.vercel.app" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" target="_blank"></a>   
 </div>
