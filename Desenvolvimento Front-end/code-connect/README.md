@@ -7,7 +7,7 @@ Aplicação web de projetando a interfaço e simulação de envios de projetos p
 
 Este projeto foi criado para facilitar o gerenciamento e a publicação de novos projetos em diferentes áreas da tecnologia da informação. Ele permite que você adicione detalhes essenciais para cada novo projeto de forma prática e organizada.
 
-(https://imgur.com/p7YxjZE.gif)
+![](https://imgur.com/p7YxjZE.gif)
 
 ## 🚀 Tecnologias
 
