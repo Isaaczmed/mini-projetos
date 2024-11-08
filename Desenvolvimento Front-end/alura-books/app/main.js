@@ -1,2 +1,2 @@
 let livros = [];
-const endpointDaAPI
+const endpointDaAPI = "https://guilhermeonrails.github.io/casadocodigo/livros.json"
