@@ -11,24 +11,4 @@ async function getBuscarLivrosDaAPI() {
     livros = await res.json();
     let livrosComDesconto = aplicarDesconto(livros);
     exibirOsLivrosNaTela(livrosComDesconto);
-    if (categoria == 'disponivel') {
-        const valorTotal = calcularValorTotalDeLivrosDisponiveis(livrosFiltrados)
-        exibirValorTotalDosLivrosDisponiveisNaTela(valorTotal)
-    }
-}
-
-function FiltrarPorCategoria(categoria) {
-    return livros.filter(livro => livro.categoria == categoria)
-}
-
-function filtrarPorDisponibilidade() {
-    return livros.filter(livro => livro.quantidade > 0)
-}
-
-function exibirValorTotalDosLivrosDisponiveisNaTela(valorTotal) {
-    elementoComValorTotalDeLivrosDisponiveis.innerHTML = `
-    <div class="livros__disponiveis">
-    <p>Todos os livros disponíveis por R$ <span id="valor">${valorTotal}</span></p>
-    </div>
-    `
 }
