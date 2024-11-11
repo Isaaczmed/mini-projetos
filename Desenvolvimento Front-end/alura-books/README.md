@@ -1,5 +1,5 @@
 
-# ALURA BOOKS
+# Alura Books
 
 Aplicação web de projetando a interface e simulação de uma loja de livros usando JavaScript.
 
