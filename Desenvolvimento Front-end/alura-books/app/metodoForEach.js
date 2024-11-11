@@ -1,6 +1,8 @@
 const elementoParaInserirLivros = document.getElementById("livros");
+const elementoComValorTotalDeLivrosDisponiveis = document.getElementById('valor_total_livros_disponiveis');
 
 function exibirOsLivrosNaTela(listaDeLivros) {
+    elementoComValorTotalDeLivrosDisponiveis.innerHTML = ''
     elementoParaInserirLivros.innerHTML = "";
     // A função percorre cada item (livro) em listaDeLivros para adicionar as informações de cada livro à tela.
     listaDeLivros.forEach(livro => {
