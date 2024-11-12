@@ -13,20 +13,20 @@ function filtrarLivros() {
     // Filtra o array "livros" para incluir apenas  os livros com a mesma categoria selecionada pelo botão
     // Para cada livro, verifica se a categoria do livro (livro.categoria) é igual à categoria selecionada
     // Se forem iguais, o livro é incluído no array filtrado (livrosFiltrados)
-    let livrosFiltrados = categoria == 'disponivel' ? filtrarPorDisponibilidade() : filtrarPorCategoria(categoria)
+    let livrosFiltrados = categoria == 'disponivel' ? filtrarPorDisponibilidade() : filtrarPorCategoria(categoria);
     exibirOsLivrosNaTela(livrosFiltrados)
     if (categoria == 'disponivel') {
-        const valorTotal = calcularValorTotalDeLivrosDisponiveis(livrosFiltrados)
-        exibirValorTotalDosLivrosDisponiveisNaTela(valorTotal)
+        const valorTotal = calcularValorTotalDeLivrosDisponiveis(livrosFiltrados);
+        exibirValorTotalDosLivrosDisponiveisNaTela(valorTotal);
     }
 }
 
 function filtrarPorCategoria(categoria) {
-    return livros.filter(livro => livro.categoria == categoria)
+    return livros.filter(livro => livro.categoria == categoria);
 }
 
 function filtrarPorDisponibilidade() {
-    return livros.filter(livro => livro.quantidade > 0)
+    return livros.filter(livro => livro.quantidade > 0);
 }
 
 function exibirValorTotalDosLivrosDisponiveisNaTela(valorTotal) {

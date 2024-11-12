@@ -2,11 +2,7 @@
 function aplicarDesconto(livros) {
     
     // Define a taxa de desconto como 30% (0.3)
-    const desconto = parseFloat(Math.random());
-
-    while (desconto > 0.6) {
-        desconto = parseFloat(Math.random());
-    }
+    const desconto = 0.3;
 
     // Usa o método .map() para criar uma nova lista com os preços dos livros atualizados
     // .map() percorre cada elemento do array 'livros' e aplica a função fornecida
