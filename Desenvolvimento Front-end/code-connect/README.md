@@ -1,7 +1,7 @@
 
 # Code Connect
 
-Aplicação web de projetando a interfaço e simulação de envios de projetos para um banco de dados usando JavaScript.
+Aplicação web de projetando a interface e simulação de envios de projetos para um banco de dados usando JavaScript.
 
 ## 📌 Sobre
 
