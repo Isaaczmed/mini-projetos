@@ -5,7 +5,7 @@ Aplicação web de projetando a interface e simulação de uma loja de livros us
 
 ## 📌 Sobre
 
-Este é um projeto desenvolvido em HTML, CSS e JavaScript que permite exibir uma lista de livros provenientes de uma API externa. O sistema oferece funcionalidades como filtragem de livros por categoria ou disponibilidade, simulação de aplicação de descontos aos preços dos livros, exibição do valor total dos livros disponíveis, e ordenação dos livros por preço (crescente ou decrescente).
+Este é um projeto desenvolvido em HTML, CSS e JavaScript que permite exibir uma lista de livros provenientes de uma API externa. O sistema oferece funcionalidades como filtragem de livros por categoria ou disponibilidade, aplicação de descontos aos preços dos livros, exibição do valor total dos livros disponíveis, e ordenação dos livros por preço (crescente ou decrescente).
 
 ## 🚀 Tecnologias
 
