@@ -7,6 +7,10 @@ const ulTarefas = document.querySelector(".app__section-task-list")
 caso não possua nada no local storage ele coloca na const a criação de um array vazio*/
 const tarefas = JSON.parse(localStorage.getItem('tarefas')) || []
 
+function atualizarTarefas() {
+    localStorage.setItem("tarefas", JSON.stringify(tarefas))
+}
+
 function criarElementoTarefa(tarefa) {
     const li = document.createElement('li')
     li.classList.add('app__section-task-list-item')
@@ -26,6 +30,15 @@ function criarElementoTarefa(tarefa) {
 
     const botao = document.createElement("button")
     botao.classList.add('app_button-edit')
+
+    botao.onclick = () => {
+        const novaDescricao = prompt("Qual é o novo nome da tarefa?")
+        if (novaDescricao && novaDescricao.trim() != "") {            
+            paragrafo.textContent = novaDescricao
+            tarefa.descricao = novaDescricao
+            atualizarTarefas()
+        }
+    }
 
     const imagemBotao = document.createElement('img')
     imagemBotao.setAttribute("src", "./imagens/edit.png")
@@ -56,7 +69,7 @@ formAdicionarTarefa.addEventListener("submit", (evento) => {
     ulTarefas.append(elementoTarefa)
     // Transforma em string para colocar no localStorage 
     // obs: localStorage só aceita strings
-    localStorage.setItem("tarefas", JSON.stringify(tarefas))
+    atualizarTarefas()
 
     textArea.value = ""
     formAdicionarTarefa.classList.add("hidden")
