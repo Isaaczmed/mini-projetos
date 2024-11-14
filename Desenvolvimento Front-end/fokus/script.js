@@ -11,10 +11,10 @@ const startPauseBt = document.querySelector("#start-pause")
 const musicaFocoInput = document.querySelector("#alternar-musica")
 const iniciarOuPausarBt = document.querySelector("#start-pause span")
 
-const musica = new Audio('/sons/luna-rise-part-one.mp3')
-const play = new Audio('/sons/play.wav')
-const pause = new Audio('/sons/pause.mp3')
-const beep = new Audio('./sons/beep.mp3') 
+const musica = new Audio("./sons/luna-rise-part-one.mp3")
+const play = new Audio("./sons/play.wav")
+const pause = new Audio("./sons/pause.mp3")
+const beep = new Audio("./sons/beep.mp3")
 
 let tempoDecorridoEmSegundos = 1500
 let intervaloId = null
@@ -37,7 +37,7 @@ function alterarContexto(contexto) {
 
     // Altera um atributo do elemento selecionado por outro
     html.setAttribute("data-contexto", contexto);
-    banner.setAttribute("src", `/imagens/${contexto}.png`)
+    banner.setAttribute("src", `./imagens/${contexto}.png`)
     switch (contexto) {
         case "foco":
             titulo.innerHTML = `
@@ -80,13 +80,13 @@ function iniciarOuPausar() {
     play.play()
     intervaloId = setInterval(contagemRegressiva, 1000)
     iniciarOuPausarBt.textContent = "Pause"
-    iniciarOuPausarImg.setAttribute("src", `/imagens/pause.png`)
+    iniciarOuPausarImg.setAttribute("src", `./imagens/pause.png`)
 }
 
 function zerar() {
     clearInterval(intervaloId)
     iniciarOuPausarBt.textContent = "Continuar"
-    iniciarOuPausarImg.setAttribute("src", `/imagens/play_arrow.png`)
+    iniciarOuPausarImg.setAttribute("src", `./imagens/play_arrow.png`)
     intervaloId = null
 }
 
