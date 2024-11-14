@@ -3,7 +3,7 @@
 <h2>📌 Sobre</h2>
 <p>Este espaço será um repositório de mini-projetos que desenvolvi ao longo dos meus estudos na faculdade, cursos da Alura e outras formações. Aqui, compartilho minha jornada de crescimento como desenvolvedor, explorando diferentes linguagens e tecnologias em busca de constante aprendizado.</p>
 
-![dino](https://github.com/user-attachments/assets/c7274f85-6c7b-410c-823e-e505a3368e00)
+![coding-anime](https://github.com/user-attachments/assets/43f686df-73e9-4637-8b56-2555951c7ba9)
 
 ## 🚀 Tecnologias
 <div>
