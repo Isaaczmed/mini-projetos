@@ -15,8 +15,7 @@ const ui = {
           </li>
         `
       })
-    }
-    catch {
+    } catch {
       alert('Erro ao renderizar pensamentos')
     }
   }
